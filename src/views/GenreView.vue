@@ -28,6 +28,8 @@ import { computed, onBeforeUnmount, onMounted, ref, watch, nextTick } from 'vue'
 import { useRoute } from 'vue-router'
 import { storeToRefs } from 'pinia'
 
+import isMobileDevice from '@/utils/isMobileDevice'
+
 import { useShowsStore } from '@/store/shows'
 
 import ShowGrid from '@/components/ShowGrid.vue'
@@ -36,7 +38,7 @@ const route = useRoute()
 const { hasMore, isLoadingNextPage } = storeToRefs(useShowsStore())
 const { getShowsByGenre, loadMoreShows } = useShowsStore()
 
-const CHUNK_SIZE = 12
+const CHUNK_SIZE = isMobileDevice() ? 4 : 12
 
 const loadMoreEl = ref<HTMLElement | null>(null)
 const visibleCount = ref(CHUNK_SIZE)
