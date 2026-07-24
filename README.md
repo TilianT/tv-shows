@@ -4,6 +4,8 @@ Vue 3 + Vite app that lets users discover TV shows — browse by genre, search, 
 
 The app uses an **API facade + provider** approach around the TVMaze API so the UI/domain logic works with app models (not TVMaze DTOs), keeping the app largely API-agnostic.
 
+Live demo: https://sprightly-cassata-7e2792.netlify.app/
+
 ---
 
 ## Setup
