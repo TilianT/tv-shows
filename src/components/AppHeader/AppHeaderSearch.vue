@@ -156,6 +156,12 @@ watch(
   padding: 10px 0;
 }
 
+@media (hover: none) and (pointer: coarse) {
+  .input {
+    font-size: 16px;
+  }
+}
+
 .spinner {
   width: 14px;
   height: 14px;
